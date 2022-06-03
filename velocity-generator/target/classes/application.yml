@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: velocity-generator
+  profiles:
+    active: db
+
+server:
+  port: 10106
+
+
+

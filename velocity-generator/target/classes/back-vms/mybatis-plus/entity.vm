@@ -1,0 +1,26 @@
+package ${projectOrAuthor.packageName}.entity;
+/**
+*  ${dbTableConfig.tableDesc}实体类
+*
+* @author ${projectOrAuthor.author}
+* @since ${projectOrAuthor.dataTime}
+*/
+@Data
+@ApiModel("${dbTableConfig.tableDesc}")
+@TableName(value = "${dbTableConfig.originTableName}")
+public class ${dbTableConfig.tableNameCase} extends Model< ${dbTableConfig.tableNameCase} > {
+#foreach($item in $formConfig)
+@ApiModelProperty(value = "$item.desc")
+private ${item.type} $item.field;
+#end
+
+/**
+* 获取主键值
+*
+* @return 主键值
+*/
+@Override
+protected Serializable pkVal() {
+return this.${dbTableConfig.uniKey};
+}
+}

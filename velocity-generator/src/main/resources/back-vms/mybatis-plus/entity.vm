@@ -21,6 +21,6 @@ private ${item.type} $item.field;
 */
 @Override
 protected Serializable pkVal() {
-return this.${dbTableConfig.uniKey};
+return this.${dbTableConfig.uniKey[0]};
 }
 }

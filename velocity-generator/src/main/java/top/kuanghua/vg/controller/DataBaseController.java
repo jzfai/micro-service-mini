@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.kuanghua.common.entity.ResResult;
+import top.kuanghua.vg.service.BackVmsService;
 import top.kuanghua.vg.service.DataBaseService;
+import top.kuanghua.vg.service.FrontVmsService;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -27,6 +29,12 @@ public class DataBaseController {
     @Resource
     private DataBaseService dataBaseService;
 
+    @Resource
+    private FrontVmsService frontVmsService;
+
+    @Resource
+    private BackVmsService backVmsService;
+
     @GetMapping("getAllTableFromDb")
     @ApiOperation(value = "mysql获取所有表")
     public ResResult getAllTableFromDb(String dbName) {
@@ -45,4 +53,5 @@ public class DataBaseController {
         ArrayList<Map> allColumnFromTb = this.dataBaseService.getAllColumnFromTb(dbName, tbName);
         return new ResResult().success(allColumnFromTb);
     }
+
 }

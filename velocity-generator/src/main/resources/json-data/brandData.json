@@ -15,13 +15,15 @@
         "isDetail": true,
         "isTableMulChoose": true
     },
-    "dbTableConfig": {
-        "tableName": "brand",
-        "originTableName": "tb_brand",
-        "tableDesc": "品牌表",
-        "tableNameCase": "Brand",
-        "uniKey": "id"
-    },
+    "dbTableConfig":[
+        {
+            "tableName": "brand",
+            "originTableName": "tb_brand",
+            "tableDesc": "品牌表",
+            "tableNameCase": "Brand",
+            "uniKey": "id"
+        }
+    ],
     "apiConfig": {
         "queryApi": "/integration-front/brand/selectPage",
         "queryApiType": "get",

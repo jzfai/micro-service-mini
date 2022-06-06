@@ -30,6 +30,6 @@ public interface DataBaseMapper {
      * @param tbName
      * @return
      */
-    @Select("SELECT COL.TABLE_SCHEMA, COL.COLUMN_NAME, COL.COLUMN_TYPE, COL.COLUMN_COMMENT ,COL.DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS COL Where TABLE_SCHEMA='micro-service-plus' AND  COL.TABLE_NAME=#{tbName}")
+    @Select("SELECT COL.* FROM INFORMATION_SCHEMA.COLUMNS COL Where TABLE_SCHEMA='micro-service-plus' AND  COL.TABLE_NAME=#{tbName}")
     ArrayList<Map> getAllColumnFromTb(@Param("dbName") String dbName, @Param("tbName") String tbName);
 }

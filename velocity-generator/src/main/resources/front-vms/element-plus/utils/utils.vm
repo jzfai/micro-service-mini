@@ -24,7 +24,7 @@
 
 ##form key
 #macro(fromDataProp)
-    $dbTableConfig.uniKey:"",
+    $dbTableConfig.uniKey[0]:"",
     #foreach($item in $formConfig)
         $item.field:"",
     #end

@@ -21,7 +21,8 @@
             "originTableName": "tb_brand",
             "tableDesc": "品牌表",
             "tableNameCase": "Brand",
-            "uniKey": "id"
+            "uniKey": "id",
+            "associationKey": "sn"
         }
     ],
     "apiConfig": {

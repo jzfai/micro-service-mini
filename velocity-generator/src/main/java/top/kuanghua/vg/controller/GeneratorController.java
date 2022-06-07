@@ -24,7 +24,6 @@ public class GeneratorController {
     @Resource
     private GeneratorService generatorService;
 
-
     @PostMapping("generatorVms")
     @ApiOperation(value = "generatorVms")
     public void generatorVms(HttpServletResponse response, @RequestBody Map generatorData) {

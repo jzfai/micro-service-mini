@@ -16,7 +16,7 @@ public class GeneratorService {
     private FrontVmsService frontVmsService;
     @Resource
     private BackVmsService backVmsService;
-
+    
     public void GeneratorVmsTemplate(Map generatorData) {
         try {
             //生成前端模板
@@ -27,4 +27,5 @@ public class GeneratorService {
             throw new RuntimeException("生成模板报错" + e.getMessage());
         }
     }
+
 }

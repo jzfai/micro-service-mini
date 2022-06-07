@@ -1,5 +1,7 @@
 package top.kuanghua.vg.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModel;
@@ -7,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 品牌表实体类
@@ -18,7 +21,7 @@ import java.io.Serializable;
 @ApiModel("品牌表")
 @TableName(value = "tb_brand")
 public class Brand extends Model<Brand> {
-    @ApiModelProperty(value = "主键")
+
     private Integer id;
     @ApiModelProperty(value = "品牌名称")
     private String name;
@@ -28,7 +31,12 @@ public class Brand extends Model<Brand> {
     private String letter;
     @ApiModelProperty(value = "排序")
     private Integer seq;
-
+    @ApiModelProperty(value = "创建时间",hidden = true)
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
+    @ApiModelProperty(value = "更新时间",hidden = true)
+    @TableField(fill = FieldFill.UPDATE)
+    private Date updateTime;
     /**
      * 获取主键值
      *

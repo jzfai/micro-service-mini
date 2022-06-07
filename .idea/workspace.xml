@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6378da28-6f05-4dcb-a510-cf4b0eeb8a9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/DataBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/DataBaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/entity/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/entity/Brand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/mapper/DataBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/mapper/DataBaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus/entity.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus/entity.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/front-vms/element-plus/utils/queryUtils.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/front-vms/element-plus/utils/queryUtils.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/front-vms/element-plus/utils/utils.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/front-vms/element-plus/utils/utils.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/GeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/GeneratorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/brandData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/brandData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/entity.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/entity.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/utils.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/utils.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/brandData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/brandData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/controller/DataBaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/controller/DataBaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/entity/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/entity/Brand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/DataBaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/DataBaseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/BackVmsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/BackVmsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/FrontVmsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/FrontVmsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +82,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -98,16 +91,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.sjhy.plugin.ui.TypeMapperSettingForm" />
+    <property name="settings.editor.selected.configurable" value="actions.on.save" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\json-data" />
+      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources" />
       <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\back-vms" />
       <recent name="D:\github\micro-service-mini" />
       <recent name="D:\github\micro-service-mini\velocity-generator\src\main\java\top\kuanghua\vg\entity" />
-      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\json-data" />
-      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\java\top\kuanghua\vg\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\construct\micro-service-mini\velocity-generator\src\main\resources" />
@@ -182,7 +175,8 @@
       <workItem from="1654132818771" duration="21147000" />
       <workItem from="1654161462008" duration="6441000" />
       <workItem from="1654215366656" duration="9935000" />
-      <workItem from="1654479419276" duration="13982000" />
+      <workItem from="1654479419276" duration="14452000" />
+      <workItem from="1654565375719" duration="14467000" />
     </task>
     <servers />
   </component>

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6378da28-6f05-4dcb-a510-cf4b0eeb8a9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/BrandController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/entity/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/entity/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/mapper/DataBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/mapper/DataBaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/GeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/GeneratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/brandData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/brandData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/brandData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/brandData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/entity/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/entity/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/DataBaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/DataBaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/FrontVmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/GeneratorTempUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/ObjectUtilsSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/ObjSelfUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/entity.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/entity.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/mutiTableData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/multiTableData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,20 @@
       <recent name="top.kuanghua.vg.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.VgApplication">
+  <component name="RunManager" selected="Application.BackVmsMulTableTest">
+    <configuration name="BackVmsMulTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.kuanghua.vg.service.BackVmsMulTableTest" />
+      <module name="velocity-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.kuanghua.vg.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackVmsService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.kuanghua.vg.service.BackVmsService" />
       <module name="velocity-generator" />
@@ -155,9 +168,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.VgApplication" />
+        <item itemvalue="Application.BackVmsMulTableTest" />
         <item itemvalue="Application.BackVmsService" />
         <item itemvalue="Application.FrontVmsService" />
+        <item itemvalue="Spring Boot.VgApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +191,7 @@
       <workItem from="1654215366656" duration="9935000" />
       <workItem from="1654479419276" duration="14452000" />
       <workItem from="1654565375719" duration="14467000" />
+      <workItem from="1654609440090" duration="4923000" />
     </task>
     <servers />
   </component>
@@ -191,13 +206,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/DataBaseController.java</url>
-          <line>40</line>
+          <line>48</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/FrontVmsUtils.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

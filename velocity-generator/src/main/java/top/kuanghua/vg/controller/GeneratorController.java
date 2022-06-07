@@ -4,7 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import top.kuanghua.vg.service.GeneratorService;
-import top.kuanghua.vg.utils.FrontVmsUtils;
+import top.kuanghua.vg.utils.GeneratorTempUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +34,6 @@ public class GeneratorController {
         response.setHeader("Access-Control-Expose-Headers", "exportFileName");
         response.setHeader("exportFileName", "velocity-temp.zip");
         //你压缩包路径
-        FrontVmsUtils.downloadZip(response, FrontVmsUtils.outputZipPath + "velocity-temp.zip");
+        GeneratorTempUtils.downloadZip(response, GeneratorTempUtils.outputZipPath + "velocity-temp.zip");
     }
 }

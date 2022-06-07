@@ -1,6 +1,6 @@
 spring:
   application:
-    name: velocity-generator
+    name: @project.artifactId@
   profiles:
     active: db
 

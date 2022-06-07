@@ -24,11 +24,12 @@ import java.nio.charset.StandardCharsets;
  * @Auther: kuanghua
  * @create 2022-05-17 13:57
  */
-public class FrontVmsUtils {
+public class GeneratorTempUtils {
     //velocity tools配置文件路径
     public static final String ToolManagerConfigPath = "velocity-tools.xml";
     public static final String ElementPlusDir = "front-vms" + File.separator + "element-plus";
     public static final String MybatisPlusDir = "back-vms" + File.separator + "mybatis-plus";
+    public static final String MybatisPlusMulTbDir = "back-vms" + File.separator + "mybatis-plus-multb";
     public static final String TestDir = "D:\\github\\velocity-test\\";
     public static final String needZipDir = "D:\\github\\velocity-test";
     public static final String outputZipPath = "D:\\github\\";
@@ -72,6 +73,17 @@ public class FrontVmsUtils {
     public static Template getMybatisPlusTemp(String tempName) {
         VelocityEngine ve = new VelocityEngine();
         ve.setProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, getResourceDirPath(MybatisPlusDir));
+        ve.init();
+        return ve.getTemplate(tempName);
+    }
+
+    /**
+     * @param tempName 模板名称
+     * @return Template
+     */
+    public static Template getMybatisPlusMulTbTemp(String tempName) {
+        VelocityEngine ve = new VelocityEngine();
+        ve.setProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, getResourceDirPath(MybatisPlusMulTbDir));
         ve.init();
         return ve.getTemplate(tempName);
     }
@@ -132,4 +144,6 @@ public class FrontVmsUtils {
             e.printStackTrace();
         }
     }
+
+
 }

@@ -9,7 +9,7 @@ import top.kuanghua.common.entity.CommonParams;
 import top.kuanghua.common.entity.ResResult;
 import top.kuanghua.vg.entity.Brand;
 import top.kuanghua.vg.service.BrandService;
-import top.kuanghua.vg.utils.ObjectUtilsSelf;
+import top.kuanghua.vg.utils.ObjSelfUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -40,10 +40,10 @@ public class BrandController {
     public ResResult selectPage(Brand brand, CommonParams commonParams) {
         QueryWrapper<Brand> queryWrapper = new QueryWrapper<>();
 //品牌名称
-        if (ObjectUtilsSelf.isNotEmpty(brand.getName())) {
+        if (ObjSelfUtils.isNotEmpty(brand.getName())) {
             queryWrapper.like("name", brand.getName());
         }
-        if (ObjectUtilsSelf.isNotEmpty(commonParams.getStartTime())) {
+        if (ObjSelfUtils.isNotEmpty(commonParams.getStartTime())) {
             queryWrapper.between("create_time", commonParams.getStartTime(), commonParams.getEndTime());
         }
         queryWrapper.select("id,name,image,letter,seq");

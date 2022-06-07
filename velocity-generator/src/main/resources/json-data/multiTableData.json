@@ -2,9 +2,17 @@
   "projectOrAuthor": {
     "author": "熊猫哥",
     "packageName": "top.kuanghua.vg",
-    "serviceName": "integration-front",
+    "serviceName": "velocity-generator",
+    "isMultiTable": false,
+    "multiTableName": "repairInfo",
+    "multiTableNameCase": "RepairInfo",
+    "multiTableDesc": "维修信息表",
+    "singleTableName": "brand",
+    "singleTableNameCase": "Brand",
+    "singleTableDesc": "实现品牌表操作(单表)",
     "dataTime": "2021-09-15 11:54:49"
   },
+  //前端配置
   "commonConfig": {
     "upFileApi": "/ty-example/upload/file",
     "isAdd": true,
@@ -15,16 +23,81 @@
     "isDetail": true,
     "isTableMulChoose": true
   },
-  "dbTableConfig": [
+  //单表数据
+  "dbTableConfig": {
+    "tableName": "repair",
+    "originTableName": "tb_brand",
+    "tableDesc": "品牌表",
+    "tableNameCase": "Brand",
+    "uniKey": "id",
+    "associationKey": "sn"
+  },
+  //多表数据
+  "multiTableConfig": [
     {
       "tableName": "repair",
-      "originTableName": "tb_brand",
-      "tableDesc": "品牌表",
-      "tableNameCase": "Brand",
+      "originTableName": "tb_repair",
+      "tableDesc": "修理表",
+      "tableNameCase": "Repair",
       "uniKey": "id",
-      "associationKey": "sn"
+      "associationKey": "sn",
+      "tableFieldArr": [
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        }
+      ]
+    },
+    {
+      "tableName": "replacement",
+      "originTableName": "tb_replacement",
+      "tableDesc": "修理表",
+      "tableNameCase": "Replacement",
+      "uniKey": "id",
+      "associationKey": "sn",
+      "tableFieldArr": [
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name",
+          "rule": "isNotNull"
+        }
+      ]
     }
   ],
+  //用于前端
   "apiConfig": {
     "queryApi": "/integration-front/brand/selectPage",
     "queryApiType": "get",

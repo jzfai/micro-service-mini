@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import org.apache.velocity.Template;
 import org.apache.velocity.context.Context;
 import org.springframework.stereotype.Service;
-import top.kuanghua.vg.utils.FrontVmsUtils;
+import top.kuanghua.vg.utils.GeneratorTempUtils;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class FrontVmsService {
     public void generatorFrontVms(Map generatorData) throws IOException {
         //String string = FrontVmsUtils.readFileToString(FrontVmsUtils.getJsonDataDirPath() + "data.json");
         Map<String, Object> jsonData = generatorData;
-        Context context = FrontVmsUtils.getVelocityContext();
+        Context context = GeneratorTempUtils.getVelocityContext();
         context.put("configData", jsonData);
         context.put("projectOrAuthor", jsonData.get("projectOrAuthor"));
         context.put("dbTableConfig", jsonData.get("dbTableConfig"));
@@ -30,13 +30,13 @@ public class FrontVmsService {
         context.put("tableConfig", jsonData.get("tableConfig"));
         context.put("formConfig", jsonData.get("formConfig"));
         context.put("commonConfig", jsonData.get("commonConfig"));
-        Template template = FrontVmsUtils.getElementPlusTemp("CRUD.vm");
-        FileWriter fileWriter = new FileWriter(FrontVmsUtils.TestDir + "CRUD.vue");
+        Template template = GeneratorTempUtils.getElementPlusTemp("CRUD.vm");
+        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUD.vue");
         template.merge(context, fileWriter);
         fileWriter.close();
         //第二个模板
-        Template addModal = FrontVmsUtils.getElementPlusTemp("CRUDForm.vm");
-        FileWriter addModalWriter = new FileWriter(FrontVmsUtils.TestDir + "CRUDForm.vue");
+        Template addModal = GeneratorTempUtils.getElementPlusTemp("CRUDForm.vm");
+        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUDForm.vue");
         addModal.merge(context, addModalWriter);
         addModalWriter.close();
 
@@ -45,10 +45,10 @@ public class FrontVmsService {
     }
 
     public static void main(String[] args) throws IOException {
-        String string = FrontVmsUtils.readFileToString(FrontVmsUtils.getJsonDataDirPath() + "tb_brand.json");
+        String string = GeneratorTempUtils.readFileToString(GeneratorTempUtils.getJsonDataDirPath() + "tb_brand.json");
         Map<String, Object> jsonData = JSON.parseObject(string, Map.class);
 
-        Context context = FrontVmsUtils.getVelocityContext();
+        Context context = GeneratorTempUtils.getVelocityContext();
         context.put("configData", jsonData);
         context.put("companyOrAuthor", jsonData.get("companyOrAuthor"));
         context.put("dbTableConfig", jsonData.get("dbTableConfig"));
@@ -57,13 +57,13 @@ public class FrontVmsService {
         context.put("tableConfig", jsonData.get("tableConfig"));
         context.put("formConfig", jsonData.get("formConfig"));
         context.put("commonConfig", jsonData.get("commonConfig"));
-        Template template = FrontVmsUtils.getElementPlusTemp("CRUD.vm");
-        FileWriter fileWriter = new FileWriter(FrontVmsUtils.TestDir + "CRUD.vue");
+        Template template = GeneratorTempUtils.getElementPlusTemp("CRUD.vm");
+        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUD.vue");
         template.merge(context, fileWriter);
         fileWriter.close();
         //第二个模板
-        Template addModal = FrontVmsUtils.getElementPlusTemp("CRUDForm.vm");
-        FileWriter addModalWriter = new FileWriter(FrontVmsUtils.TestDir + "CRUDForm.vue");
+        Template addModal = GeneratorTempUtils.getElementPlusTemp("CRUDForm.vm");
+        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUDForm.vue");
         addModal.merge(context, addModalWriter);
         addModalWriter.close();
     }

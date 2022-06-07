@@ -8,16 +8,13 @@ import top.kuanghua.common.entity.ResResult;
 import java.io.File;
 import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 从jwt解析得到的数据是Object类型，转换为具体类型可能出现空指针，
  * 这个工具类进行了一些转换
  */
-public class ObjectUtilsSelf {
+public class ObjSelfUtils {
     /*类型转换*/
     public static String toString(Object obj) {
         if (obj == null) {
@@ -100,9 +97,26 @@ public class ObjectUtilsSelf {
     }
 
     //将一般的数据转化为map
-    public static Map changeToMap(Object resResult) {
-        Map<String, Object> res = JSON.parseObject(JSON.toJSONString(resResult), Map.class);
-        return res;
+    public static Map<String, Object> changeToMap(Object resResult) {
+        return JSON.parseObject(JSON.toJSONString(resResult), Map.class);
+    }
+
+    /**
+     * 将Object数据转化为 ArrayList
+     *
+     * @param resResult
+     * @return
+     */
+    public static ArrayList<Map<String, Object>> changeToArrayMap(Object resResult) {
+        return JSON.parseObject(JSON.toJSONString(resResult), ArrayList.class);
+    }
+
+    public static ArrayList<String> changeToArrayString(Object resResult) {
+        return JSON.parseObject(JSON.toJSONString(resResult), ArrayList.class);
+    }
+
+    public static ArrayList<Integer> changeToArrayInteger(Object resResult) {
+        return JSON.parseObject(JSON.toJSONString(resResult), ArrayList.class);
     }
 
     /**

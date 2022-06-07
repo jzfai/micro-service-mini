@@ -1,15 +1,15 @@
 package ${projectOrAuthor.packageName}.entity;
 /**
-*  ${dbTableConfig.tableDesc}实体类
+*  ${currentTbConfig.tableDesc}实体类
 *
 * @author ${projectOrAuthor.author}
 * @since ${projectOrAuthor.dataTime}
 */
 @Data
-@ApiModel("${dbTableConfig.tableDesc}")
-@TableName(value = "${dbTableConfig.originTableName}")
-public class ${dbTableConfig.tableNameCase} extends Model< ${dbTableConfig.tableNameCase} > {
-#foreach($item in $formConfig)
+@ApiModel("${currentTbConfig.tableDesc}")
+@TableName(value = "${currentTbConfig.originTableName}")
+public class ${currentTbConfig.tableNameCase} extends Model< ${currentTbConfig.tableNameCase} > {
+#foreach($item in $tableFieldArr)
 @ApiModelProperty(value = "$item.desc")
 private ${item.type} $item.field;
 #end
@@ -21,6 +21,6 @@ private ${item.type} $item.field;
 */
 @Override
 protected Serializable pkVal() {
-return this.${dbTableConfig.uniKey[0]};
+return this.${currentTbConfig.uniKey};
 }
 }

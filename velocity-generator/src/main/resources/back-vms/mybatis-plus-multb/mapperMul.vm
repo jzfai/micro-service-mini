@@ -1,0 +1,10 @@
+package ${projectOrAuthor.packageName}.Mapper;
+/**
+*  ${projectOrAuthor.multiTableDesc}Mapper
+*
+* @author ${projectOrAuthor.author}
+* @since ${projectOrAuthor.dataTime}
+*/
+public interface ${projectOrAuthor.multiTableNameCase}Mapper {
+Page< Map > query${projectOrAuthor.multiTableNameCase}(Page< Map > pagination,@Param("params") Map params);
+}

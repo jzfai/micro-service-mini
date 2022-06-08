@@ -1,0 +1,18 @@
+package ${projectOrAuthor.packageName}.entity;
+/**
+*  ${projectOrAuthor.multiTableDesc}实体类
+*
+* @author ${projectOrAuthor.author}
+* @since ${projectOrAuthor.dataTime}
+*/
+@Data
+@ApiModel("${projectOrAuthor.multiTableDesc}")
+public class ${projectOrAuthor.multiTableNameCase}  {
+#foreach($mtcItem in $multiTableConfig)
+    #foreach( $tfItem in $mtcItem.tableFormArr)
+    @ApiModelProperty(value = "$tfItem.desc")
+    private ${tfItem.type} $tfItem.field;
+    #end
+#end
+
+}

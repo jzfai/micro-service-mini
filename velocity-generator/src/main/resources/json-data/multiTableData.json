@@ -41,26 +41,73 @@
       "tableNameCase": "Repair",
       "uniKey": "id",
       "associationKey": "sn",
+      "tableQueryArr": [
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id"
+        },
+        {
+          "field": "22time",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id",
+          "rule": "isNotNull"
+        }
+      ],
+      "tableShowArr": [
+        {
+          "field": "22time",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id",
+          "rule": "isNotNull"
+        }
+      ],
+      "tableFormArr": [
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id",
+          "rule": "isNotNull"
+        },
+        {
+          "field": "name",
+          "type": "String",
+          "desc": "品牌名称",
+          "originField": "name_id",
+          "rule": "isNotNull"
+        }
+      ],
       "tableFieldArr": [
         {
           "field": "name",
           "type": "String",
           "desc": "品牌名称",
-          "originField": "name",
+          "originField": "name_id",
           "rule": "isNotNull"
         },
         {
           "field": "name",
           "type": "String",
           "desc": "品牌名称",
-          "originField": "name",
+          "originField": "name_id",
           "rule": "isNotNull"
         },
         {
           "field": "name",
           "type": "String",
           "desc": "品牌名称",
-          "originField": "name",
+          "originField": "name_id",
           "rule": "isNotNull"
         }
       ]
@@ -125,30 +172,41 @@
   "tableConfig": [
     {
       "field": "name",
+      "originField": "name",
+      "fieldCase": "Name",
       "desc": "品牌名称",
+      "tableName": "",
       "width": 100,
       "componentType": "input"
     },
     {
       "field": "image",
+      "originField": "name",
+      "fieldCase": "Name",
       "desc": "品牌图片地址",
       "width": 140,
       "componentType": "image"
     },
     {
       "field": "letter",
+      "originField": "name",
+      "fieldCase": "Name",
       "desc": "首字母",
       "width": 80,
       "componentType": "input"
     },
     {
       "field": "seq",
+      "originField": "name",
+      "fieldCase": "Name",
       "desc": "排序",
       "width": 80,
       "componentType": "input"
     },
     {
       "field": "createTime",
+      "originField": "name",
+      "fieldCase": "Name",
       "desc": "创建时间",
       "width": 140,
       "componentType": "input"

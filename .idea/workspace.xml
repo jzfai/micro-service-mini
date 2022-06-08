@@ -5,14 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6378da28-6f05-4dcb-a510-cf4b0eeb8a9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/BrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/controller/GeneratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/FrontVmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/FrontVmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/GeneratorTempUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/ObjectUtilsSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/utils/ObjSelfUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/entity.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/entity.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/mutiTableData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/multiTableData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsMulTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/BackVmsMulTableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/RepairInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/java/top/kuanghua/vg/service/RepairInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/controller.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/controller.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/mapper.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/mapper.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/utils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/xml.vm" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb/xml.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/multiTableData.json" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data/multiTableData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/src/main/resources/mapper/RepairInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/velocity-generator/src/main/resources/mapper/RepairInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/application-db.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/controller.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/entity.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/mapper.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/service.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/utils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/back-vms/mybatis-plus/xml.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/CRUD.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/CRUDForm.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/formUtils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/queryUtils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/tableUtils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/front-vms/element-plus/utils/utils.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/brandData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/cascadeData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/json-data/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/spy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/VgApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/config/BaseConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/config/Knife4jConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/controller/BrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/controller/DataBaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/entity/Brand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/BrandMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/mapper/DataBaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/BackVmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/BrandService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/DataBaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/top/kuanghua/vg/service/FrontVmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity-generator/target/classes/velocity-tools.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +114,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/velocity-generator/src/main/resources/json-data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/velocity-generator/src/main/resources/back-vms/mybatis-plus-multb" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -96,11 +128,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\back-vms\mybatis-plus-multb" />
       <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\json-data" />
       <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources" />
       <recent name="D:\github\micro-service-mini\velocity-generator\src\main\resources\back-vms" />
       <recent name="D:\github\micro-service-mini" />
-      <recent name="D:\github\micro-service-mini\velocity-generator\src\main\java\top\kuanghua\vg\entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\construct\micro-service-mini\velocity-generator\src\main\resources" />
@@ -169,9 +201,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BackVmsMulTableTest" />
+        <item itemvalue="Spring Boot.VgApplication" />
         <item itemvalue="Application.BackVmsService" />
         <item itemvalue="Application.FrontVmsService" />
-        <item itemvalue="Spring Boot.VgApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +224,7 @@
       <workItem from="1654479419276" duration="14452000" />
       <workItem from="1654565375719" duration="14467000" />
       <workItem from="1654609440090" duration="4923000" />
+      <workItem from="1654652896986" duration="6316000" />
     </task>
     <servers />
   </component>

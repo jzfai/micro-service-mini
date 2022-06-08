@@ -1,5 +1,3 @@
-#parse("utils.vm")
-
 package ${projectOrAuthor.packageName}.Controller;
 /**
 *  ${dbTableConfig.tableDesc}Controller

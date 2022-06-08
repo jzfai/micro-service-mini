@@ -1,10 +1,10 @@
 package ${projectOrAuthor.packageName}.Mapper;
 /**
-*  ${dbTableConfig.tableDesc}Mapper
+*  ${currentTbConfig.tableDesc}Mapper
 *
 * @author ${projectOrAuthor.author}
 * @since ${projectOrAuthor.dataTime}
 */
-public interface ${dbTableConfig.tableNameCase}Mapper extends BaseMapper< ${dbTableConfig.tableNameCase} > {
+public interface ${currentTbConfig.tableNameCase}Mapper extends BaseMapper< ${currentTbConfig.tableNameCase} > {
 
 }

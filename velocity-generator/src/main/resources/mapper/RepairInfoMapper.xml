@@ -11,7 +11,7 @@
      rm.new_sn_id
     </sql>
 
-    <select id="queryRepairAndReplace" resultType="java.util.Map">
+    <select id="queryRepairInfo" resultType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
         FROM tb_repair rp

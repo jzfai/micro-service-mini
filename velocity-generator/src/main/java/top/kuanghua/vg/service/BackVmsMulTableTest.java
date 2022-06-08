@@ -44,6 +44,13 @@ public class BackVmsMulTableTest {
                 entityWriter = new FileWriter(GeneratorTempUtils.TestDir + fItem.get("tableNameCase") + ".java");
                 entityTemp.merge(context, entityWriter);
                 entityWriter.close();
+
+
+                //single-mapper
+                Template mapperTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("mapper.vm");
+                FileWriter mapperWriter = new FileWriter(GeneratorTempUtils.TestDir + fItem.get("tableNameCase") + "Mapper.java");
+                mapperTemp.merge(context, mapperWriter);
+                mapperWriter.close();
             } catch (IOException e) {
                 throw new RuntimeException("生成实体类报错" + e);
             }
@@ -51,25 +58,34 @@ public class BackVmsMulTableTest {
         String tbName = projectOrAuthor.get("multiTableNameCase").toString();
 
         //controller
-        Template controllerTemp = GeneratorTempUtils.getMybatisPlusTemp("controller.vm");
+        Template controllerTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("controller.vm");
         FileWriter controllerWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Controller.java");
         controllerTemp.merge(context, controllerWriter);
         controllerWriter.close();
         //service
-        Template serviceTemp = GeneratorTempUtils.getMybatisPlusTemp("service.vm");
+        Template serviceTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("service.vm");
         FileWriter serviceWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Service.java");
         serviceTemp.merge(context, serviceWriter);
         serviceWriter.close();
-        //mapper
-        Template mapperTemp = GeneratorTempUtils.getMybatisPlusTemp("mapper.vm");
-        FileWriter mapperWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Mapper.java");
-        mapperTemp.merge(context, mapperWriter);
-        mapperWriter.close();
+
+
+        //mul-entity
+        Template mapperMulTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("mapperMul.vm");
+        FileWriter mapperMulWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Mapper.java");
+        mapperMulTemp.merge(context, mapperMulWriter);
+        mapperMulWriter.close();
+
+        //entity-vo
+        Template entityVoTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("entityVo.vm");
+        FileWriter entityVoWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Vo.java");
+        entityVoTemp.merge(context, entityVoWriter);
+        entityVoWriter.close();
+
 
         //xml
-        Template xmlTemp = GeneratorTempUtils.getMybatisPlusTemp("xml.vm");
+        Template xmlTemp = GeneratorTempUtils.getMybatisPlusMulTbTemp("xml.vm");
         FileWriter xmlWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Mapper.xml");
-        mapperTemp.merge(context, xmlWriter);
+        xmlTemp.merge(context, xmlWriter);
         xmlWriter.close();
     }
 }

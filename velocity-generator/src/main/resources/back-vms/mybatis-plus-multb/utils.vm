@@ -1,3 +1,0 @@
-#macro(getOriginField)
-    #foreach($item in $formConfig)$item.originField,#end
-#end

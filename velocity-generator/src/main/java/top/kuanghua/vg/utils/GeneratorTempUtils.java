@@ -30,9 +30,105 @@ public class GeneratorTempUtils {
     public static final String ElementPlusDir = "front-vms" + File.separator + "element-plus";
     public static final String MybatisPlusDir = "back-vms" + File.separator + "mybatis-plus";
     public static final String MybatisPlusMulTbDir = "back-vms" + File.separator + "mybatis-plus-multb";
-    public static final String TestDir = "D:\\github\\velocity-test\\";
-    public static final String needZipDir = "D:\\github\\velocity-test";
-    public static final String outputZipPath = "D:\\github\\";
+
+
+
+    //win
+    public static final String ExportFileDir = "D:\\temp-dir\\export-dir\\";
+    public static final String NeedZipDir = "D:\\temp-dir\\export-dir\\";
+    public static final String OutputZipPath = "D:\\temp-dir\\";
+    //mac和Linux
+    public static final String MacExportFileDir = "/tmp/export-dir/";
+    public static final String MacNeedZipDir = "/tmp/export-dir/";
+    public static final String MacOutputZipPath = "/tmp/";
+    /**
+     *
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:54
+     */
+    public  static String getExportFileDir(){
+        String os = System.getProperty("os.name");
+        String path="";
+        if(os.toLowerCase().startsWith("win")){
+            path=  ExportFileDir;
+        }else{
+            path= MacExportFileDir;
+        }
+        return  fileMkdir(path);
+    }
+
+    /**
+
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:53
+     */
+    public  static String getNeedZipDir(){
+        String os = System.getProperty("os.name");
+        String path="";
+        if(os.toLowerCase().startsWith("win")){
+            path=  NeedZipDir;
+        }else{
+            path= MacNeedZipDir;
+        }
+        return fileMkdir(path);
+    }
+
+    /**
+     *
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:53
+     */
+    public  static String getOutputZipPath(){
+        String os = System.getProperty("os.name");
+        String path="";
+        if(os.toLowerCase().startsWith("win")){
+            path= OutputZipPath;
+        }else{
+            path= MacOutputZipPath;
+        }
+        return   fileMkdir(path);
+    }
+
+    /**
+     *
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:56
+     */
+    public  static String fileMkdir(String path){
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        return path;
+    }
+
+
+    /**
+     *
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:56
+     */
+    public  static String getAultonAssetDir(){
+        String os = System.getProperty("os.name");
+        String path="";
+        if(os.toLowerCase().startsWith("win")){
+            path= "D:\\work\\aulton\\front-generator\\aulton-asset";
+        }else{
+            path= "/data/front-generator/aulton-asset";
+        }
+        return   fileMkdir(path);
+    }
+
 
     /**
      * @return velocity Context

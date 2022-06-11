@@ -31,12 +31,12 @@ public class FrontVmsService {
         context.put("formConfig", jsonData.get("formConfig"));
         context.put("commonConfig", jsonData.get("commonConfig"));
         Template template = GeneratorTempUtils.getElementPlusTemp("CRUD.vm");
-        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUD.vue");
+        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + "CRUD.vue");
         template.merge(context, fileWriter);
         fileWriter.close();
         //第二个模板
         Template addModal = GeneratorTempUtils.getElementPlusTemp("CRUDForm.vm");
-        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUDForm.vue");
+        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + "CRUDForm.vue");
         addModal.merge(context, addModalWriter);
         addModalWriter.close();
 
@@ -58,12 +58,12 @@ public class FrontVmsService {
         context.put("formConfig", jsonData.get("formConfig"));
         context.put("commonConfig", jsonData.get("commonConfig"));
         Template template = GeneratorTempUtils.getElementPlusTemp("CRUD.vm");
-        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUD.vue");
+        FileWriter fileWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + "CRUD.vue");
         template.merge(context, fileWriter);
         fileWriter.close();
         //第二个模板
         Template addModal = GeneratorTempUtils.getElementPlusTemp("CRUDForm.vm");
-        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.TestDir + "CRUDForm.vue");
+        FileWriter addModalWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + "CRUDForm.vue");
         addModal.merge(context, addModalWriter);
         addModalWriter.close();
     }

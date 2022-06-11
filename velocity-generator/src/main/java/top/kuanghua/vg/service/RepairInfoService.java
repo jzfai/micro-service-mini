@@ -10,13 +10,13 @@ import top.kuanghua.vg.entity.Replacement;
 import top.kuanghua.vg.mapper.RepairInfoMapper;
 import top.kuanghua.vg.mapper.RepairMapper;
 import top.kuanghua.vg.mapper.ReplacementMapper;
-import top.kuanghua.vg.vo.RepairInfo;
+import top.kuanghua.vg.vo.RepairInfoVo;
 
 import javax.annotation.Resource;
 import java.util.Map;
 
 /**
- * @author 邝华
+ * @author 猫哥
  * @date 2022-06-07 11:43
  **/
 @Service
@@ -35,18 +35,18 @@ public class RepairInfoService {
         return repairInfoMapper.queryRepairInfo(new Page<Map>(commonParams.getPageNum(), commonParams.getPageSize()), repairVo);
     }
 
-    public RepairInfo selectById(Integer id) {
-        return this.selectById(id);
+    public Map selectById(String id) {
+       return repairInfoMapper.selectById(id);
     }
 
     @Transactional
-    public void insert(RepairInfo repairInfo) {
+    public void insert(RepairInfoVo repairInfo) {
         this.repairMapper.insert(JSON.parseObject(JSON.toJSONString(repairInfo), Repair.class));
         this.replacementMapper.insert(JSON.parseObject(JSON.toJSONString(repairInfo), Replacement.class));
     }
 
     @Transactional
-    public void updateById(RepairInfo repairInfo) {
+    public void updateById(RepairInfoVo repairInfo) {
         this.repairMapper.updateById(JSON.parseObject(JSON.toJSONString(repairInfo), Repair.class));
         this.replacementMapper.updateById(JSON.parseObject(JSON.toJSONString(repairInfo), Replacement.class));
     }
@@ -56,5 +56,4 @@ public class RepairInfoService {
         this.repairMapper.deleteById(id);
         this.replacementMapper.deleteById(id);
     }
-
 }

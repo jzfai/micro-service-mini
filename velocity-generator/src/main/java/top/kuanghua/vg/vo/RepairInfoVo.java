@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel("维修信息表")
-public class RepairInfo {
+public class RepairInfoVo {
     @ApiModelProperty(value = "品牌名称")
     private String name;
     @ApiModelProperty(value = "品牌名称")

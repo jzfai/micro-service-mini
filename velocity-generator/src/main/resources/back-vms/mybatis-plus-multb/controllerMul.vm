@@ -1,0 +1,73 @@
+package ${projectOrAuthor.packageName}.Controller;
+/**
+*  ${dbTableConfig.multiTableDesc}Controller
+*
+* @author ${projectOrAuthor.author}
+* @since ${projectOrAuthor.dataTime}
+*/
+@Api(tags = "维修信息")
+@RestController
+@RequestMapping("${dbTableConfig.multiTableName}")
+@CrossOrigin
+public class ${dbTableConfig.multiTableNameCase}Controller {
+@Resource
+private ${dbTableConfig.multiTableNameCase}Service ${dbTableConfig.multiTableName}Service;
+
+@ApiOperation(value = "多表测试")
+@GetMapping("query${dbTableConfig.multiTableNameCase}")
+public Page< Map > query${dbTableConfig.multiTableNameCase}(CommonParams commonParams, Map repairVo) {
+    return ${dbTableConfig.multiTableName}Service.query${dbTableConfig.multiTableNameCase}(commonParams, repairVo);
+    }
+
+
+    /**
+    * 新增数据
+    *
+    * @param ${dbTableConfig.multiTableName} 实体对象
+    * @return 新增结果
+    */
+    @ApiOperation(value = "新增数据")
+    @PostMapping("insert")
+    public ResResult insert(@RequestBody ${dbTableConfig.multiTableNameCase}Vo ${dbTableConfig.multiTableName}) {
+    this.${dbTableConfig.multiTableName}Service.insert(${dbTableConfig.multiTableName});
+    return new ResResult().success();
+    }
+
+
+    /**
+    * 通过主键查询单条数据
+    *
+    * @param ${dbTableConfig.associationKey} 主键
+    * @return 单条数据
+    */
+    @GetMapping("selectByKey")
+    @ApiOperation(value = "通过联合key查询连表数据")
+    public ResResult selectByKey(@RequestParam("${dbTableConfig.associationKey}") ${dbTableConfig.associationKeyType} ${dbTableConfig.associationKey}) {
+    return new ResResult().success(${dbTableConfig.multiTableName}Service.selectByKey(${dbTableConfig.associationKey}));
+    }
+
+    /**
+    * 修改数据
+    *
+    * @param ${dbTableConfig.multiTableName} 实体对象
+    * @return 修改结果
+    */
+    @ApiOperation(value = "根据${dbTableConfig.associationKey}修改数据")
+    @PutMapping("updateByKey")
+    public ResResult updateByKey(@RequestBody ${dbTableConfig.multiTableNameCase}Vo ${dbTableConfig.multiTableName}) {
+    this.${dbTableConfig.multiTableName}Service.updateByKey(${dbTableConfig.multiTableName});
+    return new ResResult().success();
+    }
+
+
+    /**
+    * 删除项根据主键key
+    * @param ${dbTableConfig.associationKey}
+    * @return
+    */
+    @DeleteMapping("deleteByKey")
+    public ResResult deleteByKey(@RequestParam("${dbTableConfig.associationKey}") ${dbTableConfig.associationKeyType} ${dbTableConfig.associationKey}) {
+    this.${dbTableConfig.multiTableName}Service.deleteByKey(${dbTableConfig.associationKey});
+    return new ResResult().success();
+    }
+}

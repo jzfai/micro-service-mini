@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @author 邝华
+ * @author 猫哥
  * @date 2022-06-02 10:59
  **/
 @Service
@@ -36,25 +36,25 @@ public class BackVmsService {
         String tbName = projectOrAuthor.get("tbName").toString();
         //entity
         Template entityTemp = GeneratorTempUtils.getMybatisPlusTemp("entity.vm");
-        FileWriter entityWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + ".java");
+        FileWriter entityWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + tbName + ".java");
         entityTemp.merge(context, entityWriter);
         entityWriter.close();
         //controller
         Template controllerTemp = GeneratorTempUtils.getMybatisPlusTemp("controller.vm");
-        FileWriter controllerWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Controller.java");
+        FileWriter controllerWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + tbName + "Controller.java");
         controllerTemp.merge(context, controllerWriter);
         controllerWriter.close();
         //service
         Template serviceTemp = GeneratorTempUtils.getMybatisPlusTemp("service.vm");
-        FileWriter serviceWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Service.java");
+        FileWriter serviceWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + tbName + "Service.java");
         serviceTemp.merge(context, serviceWriter);
         serviceWriter.close();
         //mapper
         Template mapperTemp = GeneratorTempUtils.getMybatisPlusTemp("mapper.vm");
-        FileWriter mapperWriter = new FileWriter(GeneratorTempUtils.TestDir + tbName + "Mapper.java");
+        FileWriter mapperWriter = new FileWriter(GeneratorTempUtils.getExportFileDir() + tbName + "Mapper.java");
         mapperTemp.merge(context, mapperWriter);
         mapperWriter.close();
         //生成zip包
-        GeneratorTempUtils.createZipFile(GeneratorTempUtils.outputZipPath + "velocity-temp.zip", GeneratorTempUtils.needZipDir);
+        //GeneratorTempUtils.createZipFile(GeneratorTempUtils.outputZipPath + "velocity-temp.zip", GeneratorTempUtils.needZipDir);
     }
 }

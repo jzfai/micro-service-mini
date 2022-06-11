@@ -122,6 +122,13 @@ public class ObjSelfUtils {
     /**
      * @return 时间年月日
      */
+    public static String getCurrentDateTimeTrim() {
+        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");//设置日期格式
+        return df.format(new Date());
+    }
+    /**
+     * @return 时间年月日
+     */
     public static String getCurrentDateTime() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         return df.format(new Date());

@@ -8,4 +8,6 @@ import java.util.Map;
 public interface RepairInfoMapper {
     Page<Map> queryRepairInfo(Page<Map> pagination,
                               @Param("params") Map params);
+
+    Map selectById(@Param("sn") String associationKey);
 }

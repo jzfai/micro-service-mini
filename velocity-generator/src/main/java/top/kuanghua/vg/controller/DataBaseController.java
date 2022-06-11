@@ -29,12 +29,6 @@ public class DataBaseController {
     @Resource
     private DataBaseService dataBaseService;
 
-    @Resource
-    private FrontVmsService frontVmsService;
-
-    @Resource
-    private BackVmsService backVmsService;
-
     @GetMapping("getAllTableFromDb")
     @ApiOperation(value = "mysql获取所有表")
     public ResResult getAllTableFromDb(String dbName) {

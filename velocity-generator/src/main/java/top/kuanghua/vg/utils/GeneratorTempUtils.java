@@ -17,6 +17,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 
 /**
  * @Title: FrontVmsUtils
@@ -37,10 +38,12 @@ public class GeneratorTempUtils {
     public static final String ExportFileDir = "D:\\temp-dir\\export-dir\\";
     public static final String NeedZipDir = "D:\\temp-dir\\export-dir\\";
     public static final String OutputZipPath = "D:\\temp-dir\\";
+    public static final String TmpSaveDir = "D:\\temp-dir\\";
     //mac和Linux
     public static final String MacExportFileDir = "/tmp/export-dir/";
     public static final String MacNeedZipDir = "/tmp/export-dir/";
     public static final String MacOutputZipPath = "/tmp/";
+    public static final String MacTmpSaveDir = "/tmp/";
     /**
      *
      * @return
@@ -55,6 +58,25 @@ public class GeneratorTempUtils {
             path=  ExportFileDir;
         }else{
             path= MacExportFileDir;
+        }
+        return  fileMkdir(path);
+    }
+
+    /**
+     * 获取临时存储目录路径
+     * @return
+     * @author 邝华
+     * @email kuanghua@aulton.com
+     * @date 2022-06-10 13:54
+     */
+    public  static String getTmpSaveDir(){
+        String os = System.getProperty("os.name");
+        String path="";
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        if(os.toLowerCase().startsWith("win")){
+            path=  TmpSaveDir+uuid+File.separator;
+        }else{
+            path= MacTmpSaveDir+uuid+File.separator;
         }
         return  fileMkdir(path);
     }
@@ -169,6 +191,17 @@ public class GeneratorTempUtils {
     public static Template getMybatisPlusTemp(String tempName) {
         VelocityEngine ve = new VelocityEngine();
         ve.setProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, getResourceDirPath(MybatisPlusDir));
+        ve.init();
+        return ve.getTemplate(tempName);
+    }
+
+    /**
+     * @param tempName 模板名称
+     * @return Template
+     */
+    public static Template getTmpSaveDirTemp(String tmpSaveDir,String tempName) {
+        VelocityEngine ve = new VelocityEngine();
+        ve.setProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, tmpSaveDir);
         ve.init();
         return ve.getTemplate(tempName);
     }

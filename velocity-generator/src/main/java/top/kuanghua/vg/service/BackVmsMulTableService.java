@@ -1,6 +1,5 @@
 package top.kuanghua.vg.service;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.velocity.Template;
 import org.apache.velocity.context.Context;
 import org.springframework.stereotype.Service;

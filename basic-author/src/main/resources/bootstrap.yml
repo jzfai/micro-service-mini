@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: @project.artifactId@
+  profiles:
+    active: @activatedProperties@
+  cloud:
+    nacos:
+      discovery:
+        namespace: @nacosNamespace@
+        group: @nacosGroup@
+        username: @nacosUsername@
+        password: @nacosPassword@
+        server-addr: @nacosIpPort@
+        weight: @nacosWeight@
+        ip: @nacosDiscoveryIp@
+
+server:
+  port: 10131
